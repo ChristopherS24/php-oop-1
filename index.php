@@ -35,8 +35,18 @@ $actors = [
 
 $year = '2013';
 
-
 $nopainnogain = new Movie('No Pain No Gain', $genres, $actors, $year);
-
 var_dump($nopainnogain);
+
+
+//Altro film
+$actorsnewfilm = [
+    'Mark Wahlberg',
+    'Amanda Seyfried',
+    'Jessica Barth'
+];
+
+$tedtwo = new Movie('Ted Two', 'Comedy', $actorsnewfilm, 2015);
+var_dump($tedtwo);
+
 ?>
