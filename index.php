@@ -6,33 +6,37 @@ class Movie {
     private $year;
     public $actors;
 
-    function __construct($title, $genres, $actors, $years) {
+    function __construct($title, $genres, $actors, $year) {
         $this->title = $title;
         $this->genres = $genres;
-        $this->year = $year;
         $this->actors = $actors;
-    }
-
-    public function setYear($year) {
         $this->year = $year;
     }
 
+    private function getYear() {
+        return $this->year;
+    }
 }
 
-$nopainnogain = new Movie('No Pain No Gain', $genres, 2013, $actors);
 //$nopainnogain->title = 'No Pain No Gain';
-$nopainnogain->genres = [
+
+$genres = [
     'Action',
     'Drama',
     'Noir',
     'Comedy'
 ];
-$nopainnogain->setYear('2013');
-$nopainnogain->actors = [
+
+$actors = [
     'Dwayne Johnson',
     'Mark Wahlberg',
     'Anthony Mackie'
 ];
+
+$year = '2013';
+
+
+$nopainnogain = new Movie('No Pain No Gain', $genres, $actors, $year);
 
 var_dump($nopainnogain);
 ?>
